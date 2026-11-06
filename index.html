@@ -6,13 +6,15 @@
   <meta name="description" content="100 к 1 — выберите самый популярный ответ">
   <title>100 к 1</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="festive.css">
 </head>
 <body>
   <main class="shell">
-    <header><a class="brand" href="./">100 к 1</a><div class="score"><span>Баллы</span><strong id="score">0</strong></div></header>
+    <header><a class="brand" href="./"><span class="brand__star">✦</span><span>100 к 1</span><small>Новогодняя игра</small></a><div class="score"><span>Ваши баллы</span><strong id="score">0</strong></div></header>
     <section class="card" aria-labelledby="question">
       <div class="meta"><span id="counter">Вопрос 1 из 1</span><span>Выберите один вариант</span></div>
       <div class="progress"><div id="progress"></div></div>
+      <div class="eyebrow"><span></span> Новогодний раунд <span></span></div>
       <h1 id="question">Загрузка вопроса…</h1>
       <p id="hint">Какой ответ, по вашему мнению, выбрали чаще всего?</p>
       <div class="answers" id="answers" role="group" aria-label="Варианты ответа"></div>

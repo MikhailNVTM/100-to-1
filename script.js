@@ -38,4 +38,17 @@ function next(){
 }
 
 function pointsText(value){const n=value%100,d=value%10;let word='баллов';if(n<11||n>14){if(d===1)word='балл';else if(d>=2&&d<=4)word='балла'}return`${value} ${word}`}
-el.next.addEventListener('click',next);load();
+function createSnowfall(){
+  const snow=document.createElement('div');snow.className='snowfall';snow.setAttribute('aria-hidden','true');
+  for(let index=0;index<42;index++){
+    const flake=document.createElement('i');
+    flake.style.setProperty('--x',`${Math.random()*100}vw`);
+    flake.style.setProperty('--size',`${3+Math.random()*7}px`);
+    flake.style.setProperty('--speed',`${7+Math.random()*10}s`);
+    flake.style.setProperty('--delay',`${-Math.random()*16}s`);
+    flake.style.setProperty('--drift',`${-45+Math.random()*90}px`);
+    snow.append(flake);
+  }
+  document.body.prepend(snow);
+}
+el.next.addEventListener('click',next);createSnowfall();load();
