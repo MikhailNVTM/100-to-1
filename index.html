@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="100 к 1 — выберите самый популярный ответ">
+  <title>100 к 1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header><a class="brand" href="./">100 к 1</a><div class="score"><span>Баллы</span><strong id="score">0</strong></div></header>
+    <section class="card" aria-labelledby="question">
+      <div class="meta"><span id="counter">Вопрос 1 из 1</span><span>Выберите один вариант</span></div>
+      <div class="progress"><div id="progress"></div></div>
+      <h1 id="question">Загрузка вопроса…</h1>
+      <p id="hint">Какой ответ, по вашему мнению, выбрали чаще всего?</p>
+      <div class="answers" id="answers" role="group" aria-label="Варианты ответа"></div>
+      <div class="result" id="result" hidden><p id="message"></p><button id="next" type="button">Далее</button></div>
+      <div class="error" id="error" hidden>Не удалось загрузить <code>questions.json</code>.</div>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
